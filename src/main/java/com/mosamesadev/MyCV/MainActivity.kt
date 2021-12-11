@@ -7,9 +7,6 @@ import android.view.Window
 import android.view.WindowManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.recyclersample.R
-import com.mosamesadev.myCV.RecyclerViewAdapter
-import com.mosamesadev.myCV.User
 
 
 class MainActivity : AppCompatActivity() {
@@ -24,13 +21,8 @@ class MainActivity : AppCompatActivity() {
         recyclerView.layoutManager = LinearLayoutManager(this)
         val item = ArrayList<User>()
         //adding user
-        item.add(User("R.drawable.iconcookie","Developers", Lastname = "Foo"))
-        item.add(User("R.drawable.iconfrontman","Developers", Lastname = "Foo"))
-        item.add(User("R.drawable.iconmanager","Developers", Lastname = "Foo"))
-        item.add(User("R.drawable.iconsoldier","Developers", Lastname = "Foo"))
-        item.add(User("R.drawable.iconworker","Developers", Lastname = "Foo"))
-        item.add(User("R.drawable.iconyounghee","Developers", Lastname = "Foo"))
-        item.add(User("R.drawable.iconplattegrond","Developers", Lastname = "Foo"))
+        item.add(User("https://raw.githubusercontent.com/MosaMesaDev/MyCV/master/src/main/res/drawable/iconcookie.png","Developers", Lastname = "Foo"))
+
 
         //Adapter setting
         mAdapter = RecyclerViewAdapter(item)
