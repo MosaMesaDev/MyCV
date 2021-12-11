@@ -1,4 +1,4 @@
-package com.mosamesadev.MyCV
+package com.mosamesadev.myCV
 
 
 import androidx.appcompat.app.AppCompatActivity
@@ -8,6 +8,9 @@ import android.view.WindowManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.recyclersample.R
+import com.mosamesadev.myCV.RecyclerViewAdapter
+import com.mosamesadev.myCV.User
+
 
 class MainActivity : AppCompatActivity() {
     private lateinit var mAdapter: RecyclerViewAdapter
@@ -21,14 +24,14 @@ class MainActivity : AppCompatActivity() {
         recyclerView.layoutManager = LinearLayoutManager(this)
         val item = ArrayList<User>()
         //adding user
-        item.add(User("Developers", Lastname = "Foo"))
-        item.add(User("Dome", Lastname = "Foo"))
-        item.add(User("Developers1", Lastname = "Foo"))
-        item.add(User("Dome1", Lastname = "Foo"))
-        item.add(User("Developers2", Lastname = "Foo"))
-        item.add(User("Dome2", Lastname = "Foo"))
-        item.add(User("Developers3", Lastname = "Foo"))
-        item.add(User("Dome3", Lastname = "Foo"))
+        item.add(User("R.drawable.iconcookie","Developers", Lastname = "Foo"))
+        item.add(User("R.drawable.iconfrontman","Developers", Lastname = "Foo"))
+        item.add(User("R.drawable.iconmanager","Developers", Lastname = "Foo"))
+        item.add(User("R.drawable.iconsoldier","Developers", Lastname = "Foo"))
+        item.add(User("R.drawable.iconworker","Developers", Lastname = "Foo"))
+        item.add(User("R.drawable.iconyounghee","Developers", Lastname = "Foo"))
+        item.add(User("R.drawable.iconplattegrond","Developers", Lastname = "Foo"))
+
         //Adapter setting
         mAdapter = RecyclerViewAdapter(item)
         recyclerView.adapter = mAdapter

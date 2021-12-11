@@ -1,3 +1,5 @@
-package com.mosamesadev.MyCV
+package com.mosamesadev.myCV
 
-data class User(val Firstname: String, val Lastname: String)
+import android.graphics.drawable.Drawable
+
+data class User(val CVRecyclerImage:String, val Firstname: String, val Lastname: String)
