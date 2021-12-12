@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Reverse">
+
+
+    <TextView
+        android:id="@+id/ReverseTextView1"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="false"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="512dp"
+        android:text="Fill this with your sentence, to reverse it."
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/btnReverse"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginEnd="159dp"
+        android:layout_marginBottom="353dp"
+        android:text="REVERSE" />
+
+    <TextView
+        android:id="@+id/ReverseTextView2"
+        android:layout_width="369dp"
+        android:layout_height="38dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+
+        android:layout_marginBottom="299dp"
+        android:text="Result:"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/ReverseTextView3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="20dp"
+
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="262dp"
+        android:textSize="20sp" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/ReverseInput"
+        android:layout_width="378dp"
+        android:layout_height="95dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="413dp" />
+</RelativeLayout>

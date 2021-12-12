@@ -22,7 +22,7 @@ class MainActivity : AppCompatActivity() {
         val item = ArrayList<User>()
         //adding user
         item.add(User("https://raw.githubusercontent.com/MosaMesaDev/myCV/master/src/main/res/drawable/mycvastrologer.png","Astrologer", "The Astrologer activity was a basic lesson for me about working with input fields in an activity. Even tho in this particular case, the outcome will always be the same ;) ."))
-        item.add(User("https://raw.githubusercontent.com/MosaMesaDev/myCV/master/src/main/res/drawable/mycvbestproperty.png","Property locator", "In this activity you want to compare 5 neighbourhoods, you want to know which has the lowest max distance to the 5 services you need. \n\nFor interactivity, you get to place 5 important services, and then the algorithm will show which area has the lowest maximum distance to all 5 services."))
+        item.add(User("https://raw.githubusercontent.com/MosaMesaDev/myCV/master/src/main/res/drawable/mycvbestproperty.png","Property locator", "In this activity you want to compare 5 neighbourhoods, you want to know which has the lowest max distance to the 5 services you need. \n\nFor interactivity, you place 5 important services, and then the algorithm will show which area has the lowest maximum distance to all 5 services."))
         item.add(User("https://raw.githubusercontent.com/MosaMesaDev/myCV/master/src/main/res/drawable/mycvfindinarray.png","Find in array", "This activity deals with finding specific data in an array and then showing where the data was found. You can fill the array with checkboxes, for interactivity."))
         item.add(User("https://raw.githubusercontent.com/MosaMesaDev/myCV/master/src/main/res/drawable/mycvreverser.png","String Reverser", "Learning to manipulate strings, I made this activity where you can type any string of words, and have them shown in reverse order."))
         item.add(User("https://raw.githubusercontent.com/MosaMesaDev/myCV/master/src/main/res/drawable/mycvrotatearray.png","Rotate Array", "Dealing with arrays, I came across a video that showed how to rotate them. I implemented this idea into an interactive activity."))
@@ -48,14 +48,20 @@ class MainActivity : AppCompatActivity() {
                     val intent = android.content.Intent(this@MainActivity, Find0::class.java)
                     startActivity(intent)
                 }
+                if( position == 3 )                    {
+                    val intent = android.content.Intent(this@MainActivity, Reverse::class.java)
+                    startActivity(intent)
+                }
+                if( position == 4 )                    {
+                    val intent = android.content.Intent(this@MainActivity, Rotate::class.java)
+                    startActivity(intent)
+                }
 
                 if( position == 5 )                    {
                     val intent = android.content.Intent(this@MainActivity, fruitMachine::class.java)
                     startActivity(intent)
                 }
 
-
-                Toast.makeText(this@MainActivity,"You clicked position $position" , Toast.LENGTH_SHORT).show()
             }
 
         })

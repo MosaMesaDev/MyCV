@@ -26,6 +26,8 @@
         <activity android:name=".Find0"></activity>
         <activity android:name=".fruitMachine"></activity>
         <activity android:name=".PropertyLocation"></activity>
+        <activity android:name=".Reverse"></activity>
+        <activity android:name=".Rotate"></activity>
     </application>
 
 </manifest>
