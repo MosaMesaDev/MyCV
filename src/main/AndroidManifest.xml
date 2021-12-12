@@ -21,6 +21,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name="com.mosamesadev.MyCV.AstrologerSplashScreenActivity"></activity>
+        <activity android:name="com.mosamesadev.MyCV.Astrologer"></activity>
     </application>
 
 </manifest>

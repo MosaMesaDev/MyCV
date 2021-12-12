@@ -5,9 +5,11 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Window
 import android.view.WindowManager
+import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-
+import com.mosamesadev.MyCV.Astrologer
+import android.content.Intent
 
 class MainActivity : AppCompatActivity() {
     private lateinit var mAdapter: RecyclerViewAdapter
@@ -29,7 +31,24 @@ class MainActivity : AppCompatActivity() {
 
 
         //Adapter setting
-        mAdapter = RecyclerViewAdapter(item)
-        recyclerView.adapter = mAdapter
+
+        var newAdapter = RecyclerViewAdapter(item)
+        recyclerView.adapter = newAdapter
+            newAdapter.setOnItemClickListener(object : RecyclerViewAdapter.onItemClickListener{
+            override fun onItemClick(position: Int) {
+
+                if( position == 0 )                    {
+                    var intent = android.content.Intent(this@MainActivity, Astrologer::class.java)
+                    startActivity(intent)
+                }
+
+                Toast.makeText(this@MainActivity,"You clicked position $position" , Toast.LENGTH_SHORT).show()
+            }
+
+        })
+
+
+
+
     }
 }
