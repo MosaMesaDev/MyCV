@@ -1,9 +1,8 @@
-package com.mosamesadev.MyCV
+package com.mosamesadev.myCV
 
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import com.mosamesadev.myCV.R
 import kotlinx.android.synthetic.main.activity_astrologer.*
 
 

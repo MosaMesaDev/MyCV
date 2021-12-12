@@ -1,8 +1,7 @@
-package com.mosamesadev.MyCV
+package com.mosamesadev.myCV
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import com.mosamesadev.myCV.R
 
 class AstrologerSplashScreenActivity : AppCompatActivity() {
 

@@ -1,4 +1,4 @@
-package com.mosamesadev.MyCV
+package com.mosamesadev.myCV
 
 import org.junit.Test
 
