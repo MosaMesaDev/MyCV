@@ -24,6 +24,7 @@
         <activity android:name=".AstrologerSplashScreenActivity"></activity>
         <activity android:name=".Astrologer"></activity>
         <activity android:name=".Find0"></activity>
+        <activity android:name=".fruitMachine"></activity>
     </application>
 
 </manifest>
