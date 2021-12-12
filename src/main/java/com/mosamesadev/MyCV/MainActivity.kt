@@ -40,10 +40,21 @@ class MainActivity : AppCompatActivity() {
                     val intent = android.content.Intent(this@MainActivity, Astrologer::class.java)
                     startActivity(intent)
                 }
+                if( position == 1 )                    {
+                    val intent = android.content.Intent(this@MainActivity, PropertyLocation::class.java)
+                    startActivity(intent)
+                }
                 if( position == 2 )                    {
                     val intent = android.content.Intent(this@MainActivity, Find0::class.java)
                     startActivity(intent)
                 }
+
+                if( position == 5 )                    {
+                    val intent = android.content.Intent(this@MainActivity, fruitMachine::class.java)
+                    startActivity(intent)
+                }
+
+
                 Toast.makeText(this@MainActivity,"You clicked position $position" , Toast.LENGTH_SHORT).show()
             }
 
