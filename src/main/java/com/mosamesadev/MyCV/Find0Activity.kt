@@ -106,8 +106,6 @@ class Find0 : AppCompatActivity() {
         imageViewColumn2.isVisible = false
         imageViewColumn3.isVisible = false
 
-        supportActionBar?.hide() // I really do not like to see that action bar
-
         BtnFill0Execute.setOnClickListener { FindThe0InTheArray() }
 
     }
