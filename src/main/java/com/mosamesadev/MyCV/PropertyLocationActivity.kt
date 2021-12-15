@@ -307,37 +307,36 @@ class PropertyLocation : AppCompatActivity() {
             MapMaxMinDistance["L5"] = MaxDistLocation5
 
             result = MapMaxMinDistance.toList().sortedBy { (_, value) -> value}
-            textViewResult.text = result[0].toString()
             resultaat = result[0].toString()
 
-            textViewMaxDistL1.textSize = 30F
-            textViewMaxDistL2.textSize = 30F
-            textViewMaxDistL3.textSize = 30F
-            textViewMaxDistL4.textSize = 30F
-            textViewMaxDistL5.textSize = 30F
+            textViewMaxDistL1.textSize = 24F
+            textViewMaxDistL2.textSize = 24F
+            textViewMaxDistL3.textSize = 24F
+            textViewMaxDistL4.textSize = 24F
+            textViewMaxDistL5.textSize = 24F
 
             if(resultaat.contains("L1")) {
-                textViewMaxDistL1.textSize = 55F
+                textViewMaxDistL1.textSize = 44F
             }
             textViewMaxDistL1.text = MaxDistLocation1.toString()
 
             if(resultaat.contains("L2")) {
-                textViewMaxDistL2.textSize = 55F
+                textViewMaxDistL2.textSize = 44F
             }
             textViewMaxDistL2.text = MaxDistLocation2.toString()
 
             if(resultaat.contains("L3")) {
-                textViewMaxDistL3.textSize = 55F
+                textViewMaxDistL3.textSize = 44F
             }
             textViewMaxDistL3.text = MaxDistLocation3.toString()
 
             if(resultaat.contains("L4")) {
-                textViewMaxDistL4.textSize = 55F
+                textViewMaxDistL4.textSize = 44F
             }
             textViewMaxDistL4.text = MaxDistLocation4.toString()
 
             if(resultaat.contains("L5")) {
-                textViewMaxDistL5.textSize = 55F
+                textViewMaxDistL5.textSize = 44F
             }
             textViewMaxDistL5.text = MaxDistLocation5.toString()
         }
