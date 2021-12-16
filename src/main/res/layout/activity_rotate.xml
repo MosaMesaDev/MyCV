@@ -7,36 +7,6 @@
     android:layout_height="match_parent">
 
 
-    <EditText
-        android:id="@+id/editTextInputArray"
-        android:layout_width="200dp"
-        android:layout_height="100dp"
-        android:layout_above="@+id/editTextNumberRotate"
-
-        android:layout_marginTop="20dp"
-        android:layout_marginBottom="20dp"
-        android:layout_centerHorizontal="true"
-        android:digits="0123456789-"
-        android:ems="10"
-        android:gravity="center"
-        android:hint="Input an array using - as separator"
-        android:inputType="number|text"
-        android:textAlignment="center"
-        android:textSize="24sp" />
-
-    <EditText
-        android:id="@+id/editTextNumberRotate"
-        android:layout_width="334dp"
-        android:layout_height="83dp"
-        android:layout_above="@+id/BtnRotateIt"
-        android:layout_centerHorizontal="true"
-        android:ems="10"
-        android:gravity="center"
-        android:hint="How many steps to the right?"
-        android:inputType="numberSigned"
-        android:textAlignment="center"
-        android:textSize="24sp" />
-
     <Button
         android:id="@+id/BtnRotateIt"
         android:layout_width="183dp"
@@ -44,12 +14,59 @@
         android:layout_above="@+id/textView24"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginStart="115dp"
-        android:layout_marginEnd="115dp"
-        android:layout_marginBottom="20dp"
+        android:layout_marginStart="112dp"
+        android:layout_marginEnd="118dp"
+        android:layout_marginBottom="13dp"
         android:gravity="center"
         android:text="Rotate"
-        android:textSize="24sp"/>
+        android:textSize="24sp" />
+
+    <EditText
+        android:id="@+id/editTextInputArray"
+        android:layout_width="wrap_content"
+        android:layout_height="89dp"
+        android:layout_above="@+id/editTextNumberRotate"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginEnd="80dp"
+        android:layout_marginBottom="20dp"
+        android:digits="0123456789-"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="Input an array using \n- as separator"
+        android:inputType="number|text"
+        android:textAlignment="center"
+        android:textSize="24sp" />
+
+    <EditText
+        android:id="@+id/editTextNumberRotate"
+        android:layout_width="wrap_content"
+        android:layout_height="66dp"
+        android:layout_above="@+id/BtnRotateIt"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="39dp"
+        android:layout_marginEnd="31dp"
+        android:layout_marginBottom="20dp"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="How many steps to the right?"
+        android:inputType="numberSigned"
+        android:textAlignment="center"
+        android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/RotateResultTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="59dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="44dp"
+        android:layout_marginEnd="36dp"
+        android:layout_marginBottom="159dp"
+        android:gravity="center"
+        android:textSize="24sp" />
 
     <TextView
         android:id="@+id/textView24"
@@ -58,23 +75,11 @@
         android:layout_above="@+id/RotateResultTextView"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginStart="120dp"
-        android:layout_marginEnd="120dp"
+        android:layout_marginStart="123dp"
+        android:layout_marginEnd="117dp"
         android:layout_marginBottom="20dp"
         android:gravity="center"
         android:text="Result :"
-        android:textSize="24sp"/>
-
-    <TextView
-        android:id="@+id/RotateResultTextView"
-        android:layout_width="300dp"
-        android:layout_height="118dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="40dp"
-        android:layout_marginEnd="40dp"
-        android:layout_marginBottom="50dp"
-        android:gravity="center"
         android:textSize="24sp" />
+
 </RelativeLayout>
