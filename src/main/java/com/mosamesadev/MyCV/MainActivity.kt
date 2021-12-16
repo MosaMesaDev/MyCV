@@ -27,7 +27,7 @@ class MainActivity : AppCompatActivity() {
         item.add(User("https://raw.githubusercontent.com/MosaMesaDev/myCV/master/src/main/res/drawable/mycvreverser.png","String Reverser", "Learning to manipulate strings, I made this activity where you can type any string of words, and have them shown in reverse order."))
         item.add(User("https://raw.githubusercontent.com/MosaMesaDev/myCV/master/src/main/res/drawable/mycvrotatearray.png","Rotate Array", "Dealing with arrays, I came across a video that showed how to rotate them. I implemented this idea into an interactive activity."))
         item.add(User("https://raw.githubusercontent.com/MosaMesaDev/myCV/master/src/main/res/drawable/mycvslotmachine.png","Slotmachine", "This is the basic functionality of a slotmachine. I have made it to practice comparing variables and showing images on screen. \n\nFor the button which plays 10000 games, I have had to learn about Coroutines, otherwise the app would freeze for a little while."))
-
+        item.add(User("https://raw.githubusercontent.com/MosaMesaDev/myCV/master/src/main/res/drawable/mycvslotmachine.png","Flashlight","This is an attempt to use more of the hardware of the smartphone."))
 
         //Adapter setting
 
@@ -59,6 +59,10 @@ class MainActivity : AppCompatActivity() {
 
                 if( position == 5 )                    {
                     val intent = android.content.Intent(this@MainActivity, fruitMachine::class.java)
+                    startActivity(intent)
+                }
+                if( position == 6 )                    {
+                    val intent = android.content.Intent(this@MainActivity, FlashlightActivity::class.java)
                     startActivity(intent)
                 }
 

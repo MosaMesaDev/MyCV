@@ -25,7 +25,7 @@
         android:layout_height="40sp"
         android:layout_below="@+id/editTextDate"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="5dp"
+        android:layout_marginTop="20dp"
         android:layout_marginEnd="5dp"
         android:hint="Place of birth"
         android:inputType="textPersonName"
@@ -37,7 +37,7 @@
         android:layout_height="50dp"
         android:layout_below="@+id/editTextTextPersonName"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="5dp"
+        android:layout_marginTop="20dp"
         android:text="Calculate" />
 
 </RelativeLayout>

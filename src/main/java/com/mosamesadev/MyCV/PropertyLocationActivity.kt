@@ -316,27 +316,27 @@ class PropertyLocation : AppCompatActivity() {
             textViewMaxDistL5.textSize = 24F
 
             if(resultaat.contains("L1")) {
-                textViewMaxDistL1.textSize = 44F
+                textViewMaxDistL1.textSize = 36F
             }
             textViewMaxDistL1.text = MaxDistLocation1.toString()
 
             if(resultaat.contains("L2")) {
-                textViewMaxDistL2.textSize = 44F
+                textViewMaxDistL2.textSize = 36F
             }
             textViewMaxDistL2.text = MaxDistLocation2.toString()
 
             if(resultaat.contains("L3")) {
-                textViewMaxDistL3.textSize = 44F
+                textViewMaxDistL3.textSize = 36F
             }
             textViewMaxDistL3.text = MaxDistLocation3.toString()
 
             if(resultaat.contains("L4")) {
-                textViewMaxDistL4.textSize = 44F
+                textViewMaxDistL4.textSize = 36F
             }
             textViewMaxDistL4.text = MaxDistLocation4.toString()
 
             if(resultaat.contains("L5")) {
-                textViewMaxDistL5.textSize = 44F
+                textViewMaxDistL5.textSize = 36F
             }
             textViewMaxDistL5.text = MaxDistLocation5.toString()
         }

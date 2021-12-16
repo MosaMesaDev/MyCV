@@ -3,6 +3,7 @@
     package="com.mosamesadev.myCV">
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CAMERA"/>
 
     <application
         android:allowBackup="true"
@@ -28,6 +29,8 @@
         <activity android:name=".PropertyLocation"></activity>
         <activity android:name=".Reverse"></activity>
         <activity android:name=".Rotate"></activity>
+        <activity android:name=".FlashlightActivity"></activity>
+
     </application>
 
 </manifest>
