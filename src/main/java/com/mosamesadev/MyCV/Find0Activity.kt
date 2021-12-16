@@ -6,6 +6,7 @@ import androidx.core.view.isVisible
 import kotlinx.android.synthetic.main.activity_find0.*
 
 
+//First we set all the Column and Row checkers to False
 var FirstColumn = false
 var FirstRow = false
 var SecondColumn = false

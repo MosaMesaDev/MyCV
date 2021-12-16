@@ -4,13 +4,13 @@ import android.os.Bundle
 import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
 import com.bumptech.glide.Glide
-import com.mosamesadev.myCV.R
 import kotlinx.android.synthetic.main.activity_fruitmachine.*
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Dispatchers.Default
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
+
 
 // Initialize all the variables!
 var Teller = 10
@@ -54,7 +54,7 @@ class fruitMachine : AppCompatActivity() {
         textView20.text = "$fff"
     }
 
-    fun shuffleTheDeck(){
+    fun shuffleTheDeck(){  //Like when you shuffle a deck of cards, every one of the three locations gets a randomly chosen icon.
         randomFirstIcon = FirstIconList.shuffled().first()
         randomSecondIcon = SecondIconList.shuffled().first()
         randomThirdIcon = ThirdIconList.shuffled().first()}
@@ -63,11 +63,11 @@ class fruitMachine : AppCompatActivity() {
         randomSecondIcon = SecondIconList.shuffled().first()
         randomThirdIcon = ThirdIconList.shuffled().first()}
 
-    fun checkIcons() {
+    fun checkIcons() { // See the value of the three randomly generated icons
         checkFirstIcon()
         checkSecondIcon()
         checkThirdIcon() }
-    suspend fun checkIcons10000() {
+    suspend fun checkIcons10000() { // See the value of the three randomly generated icons, but this time after the 10000x button is pushed.
         checkFirstIcon10000()
         checkSecondIcon10000()
         checkThirdIcon10000()
@@ -77,6 +77,7 @@ class fruitMachine : AppCompatActivity() {
 
         // First if statement is to stop prize calculation if Young-Hee is watching
         if (randomFirstIcon != "younghee" && randomSecondIcon != "younghee" && randomThirdIcon != "younghee") {
+            // This part can use some work, to improve the way the prize is calculated. But for this CV I am going to keep it this way.
 
             // Calculate all the prizes from equal images on the first two icons
             if (randomFirstIcon == "cookie" && randomSecondIcon == "cookie") {
@@ -127,7 +128,7 @@ class fruitMachine : AppCompatActivity() {
 
         // First if statement is to stop prize calculation if Young-Hee is watching
         if (randomFirstIcon != "younghee" && randomSecondIcon != "younghee" && randomThirdIcon != "younghee") {
-
+            // This part can use some work, to improve the way the prize is calculated. But for this CV I am going to keep it this way.
             // Calculate all the prizes from equal images on the first two icons
             if (randomFirstIcon == "cookie" && randomSecondIcon == "cookie") {
                 Teller += 2
@@ -412,10 +413,10 @@ class fruitMachine : AppCompatActivity() {
 
     fun fruitMachineLogica() {
         // Slotmachine logic, after clicking on the Play button
-        Teller-- // Scorecounter decreases one time
+        Teller-- // Scorecounter, decreases one per play
         shuffleTheDeck() // Pick randomly an name from the list
         checkIcons() // Use Glide to show the images, based on the picked names
-        calculatePrize() // Add winnings to the counter
+        calculatePrize() // Add prizes to the counter
         scoreTekstVeld.text = "$Teller" // Show the new counter to the score field
         textView11.text = "$cc" // These are running totals for every winning combination. cc is the combination cookie + cookie
         textView12.text = "$ccc"

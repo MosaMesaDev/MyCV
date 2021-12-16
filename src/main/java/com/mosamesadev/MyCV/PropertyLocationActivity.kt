@@ -2,31 +2,32 @@ package com.mosamesadev.myCV
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import com.mosamesadev.myCV.R
 import kotlinx.android.synthetic.main.activity_propertylocation.*
 
+
+//First we set all the variables. It can be done is fewer lines, but I believe it is preferable fo have it orderly like it is here.
 var resultaat = " "
 
-var MaxDistancesLocation1 = listOf(0,0,0,0,0)
+var MaxDistancesLocation1 = listOf(0,0,0,0,0) //These are the distances from a certain location to the furthest service.
 var MaxDistancesLocation2 = listOf(0,0,0,0,0)
 var MaxDistancesLocation3 = listOf(0,0,0,0,0)
 var MaxDistancesLocation4 = listOf(0,0,0,0,0)
 var MaxDistancesLocation5 = listOf(0,0,0,0,0)
 
-var SortedMaxDistancesLocation1 = listOf(0,0,0,0,0)
-var SortedMaxDistancesLocation2 = listOf(0,0,0,0,0)
+var SortedMaxDistancesLocation1 = listOf(0,0,0,0,0)//Here the distances are sorted, so it is easy to.
+var SortedMaxDistancesLocation2 = listOf(0,0,0,0,0)//tell what the maximum distance from a location to a service is
 var SortedMaxDistancesLocation3 = listOf(0,0,0,0,0)
 var SortedMaxDistancesLocation4 = listOf(0,0,0,0,0)
 var SortedMaxDistancesLocation5 = listOf(0,0,0,0,0)
 
 
-var MaxDistLocation1 = 0
+var MaxDistLocation1 = 0 //The maximum found in the Sorted max distances list.
 var MaxDistLocation2 = 0
 var MaxDistLocation3 = 0
 var MaxDistLocation4 = 0
 var MaxDistLocation5 = 0
 
-var Location1SchoolDistance = 0
+var Location1SchoolDistance = 0 //Before checking anything, set all the distances to 0 (and INT)
 var Location2SchoolDistance = 0
 var Location3SchoolDistance = 0
 var Location4SchoolDistance = 0
@@ -68,6 +69,7 @@ class PropertyLocation : AppCompatActivity() {
         fun checkMinimumMaxDistanceLocation1() {
             // first check minimum distance to School, starting from the furthest away location,
             // to closer by, ending with a check on the location itself.
+            //Worst result can be 4 locations away, best result is on the location itself (=distance of 0)
             if (checkBoxPLSchool5.isChecked) {
                 Location1SchoolDistance = 4
             }
@@ -109,7 +111,10 @@ class PropertyLocation : AppCompatActivity() {
             if (checkBoxPLDogPark1.isChecked) Location1DogParkDistance = 0
         }
 
-        fun checkMinimumMaxDistanceLocation2() {
+        fun checkMinimumMaxDistanceLocation2() {//Same as above, but now for location 2.
+            //Notice that the order at which the locations are checked is different from above.
+            //This is of course because location 1 has 1 other location at distance 1, but
+            //location 2 has 2 other locations at distance 1 away (location 1 and 3)
             if (checkBoxPLSchool5.isChecked) Location2SchoolDistance = 3
             if (checkBoxPLSchool4.isChecked) Location2SchoolDistance = 2
             if (checkBoxPLSchool3.isChecked) Location2SchoolDistance = 1
@@ -204,10 +209,10 @@ class PropertyLocation : AppCompatActivity() {
             if (checkBoxPLDogPark3.isChecked) Location4DogParkDistance = 1
             if (checkBoxPLDogPark4.isChecked) Location4DogParkDistance = 0
 
-
         }
 
         fun checkMinimumMaxDistanceLocation5() {
+            //The order here is basically reversed from location 1
             if (checkBoxPLSchool1.isChecked) Location5SchoolDistance = 4
             if (checkBoxPLSchool2.isChecked) Location5SchoolDistance = 3
             if (checkBoxPLSchool3.isChecked) Location5SchoolDistance = 2
@@ -240,6 +245,7 @@ class PropertyLocation : AppCompatActivity() {
         }
 
         fun findBiggestMinimumMaxDistancePerLocation() {
+            //Get the max distances to the 5 different services for location 1
             MaxDistancesLocation1 = listOf(
                 Location1SchoolDistance,
                 Location1SupermarketDistance,
@@ -247,8 +253,13 @@ class PropertyLocation : AppCompatActivity() {
                 Location1BusStopDistance,
                 Location1DogParkDistance
             )
+            //Sort the found max distances, so we can find the biggest max distance to this loction.
             SortedMaxDistancesLocation1 = MaxDistancesLocation1.sortedDescending()
+
+            //Get the biggest max distance for this location, out of the sorted list
             MaxDistLocation1 = SortedMaxDistancesLocation1[0]
+
+            //Same but for location 2
             MaxDistancesLocation2 = listOf(
                 Location2SchoolDistance,
                 Location2SupermarketDistance,
@@ -309,15 +320,20 @@ class PropertyLocation : AppCompatActivity() {
             result = MapMaxMinDistance.toList().sortedBy { (_, value) -> value}
             resultaat = result[0].toString()
 
+            //For the sub-optimal locations, use a smaller font for the result.
             textViewMaxDistL1.textSize = 24F
             textViewMaxDistL2.textSize = 24F
             textViewMaxDistL3.textSize = 24F
             textViewMaxDistL4.textSize = 24F
             textViewMaxDistL5.textSize = 24F
 
+
             if(resultaat.contains("L1")) {
+                //For the optimal location, use a bigger font for the result.
                 textViewMaxDistL1.textSize = 36F
             }
+            //Show the result on the screen.
+            // If it is the best result, this number will be in a bigger font.
             textViewMaxDistL1.text = MaxDistLocation1.toString()
 
             if(resultaat.contains("L2")) {

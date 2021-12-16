@@ -3,12 +3,13 @@ package com.mosamesadev.myCV
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 
+
 class AstrologerSplashScreenActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_astrologer_splashscreen)
-
+        //All this does is open a new page with funny text and a picture.
     }
 
 }

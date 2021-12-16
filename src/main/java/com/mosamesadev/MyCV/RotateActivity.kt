@@ -6,6 +6,7 @@ import kotlinx.android.synthetic.main.activity_rotate.*
 import java.util.*
 
 
+//a few variables to initialize
 var temp = " "
 var RotateArray  = listOf(" ")
 var RotateArrayTempString  = " "
